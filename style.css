@@ -17,7 +17,7 @@ body{
 }
 
 .page{
-  width: 128rem;
+  max-width: 128rem;
   margin: auto;
 }
 
@@ -29,7 +29,7 @@ nav{
 
   padding-top: 7.1rem;
   margin: 0 9.8rem 10.1rem 9.9rem;
-  width: 108.3rem;
+  max-width: 108.3rem;
 }
 nav ul{
   display: flex;
@@ -54,13 +54,18 @@ nav ul li a:hover{
 }
 
 /*======== Main / section =========*/
+
 main{
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   margin: 0 auto 15.7rem;
-  width: 109.2rem;
+  max-width: 109.2rem;
+}
+main img{
+  width: 100%;
+  max-width: 40.1rem;
 }
 main section{
   display: flex;
@@ -69,7 +74,7 @@ main section{
   flex-direction: column;
   text-align: center;
 
-  width: 61.4rem;
+  max-width: 61.4rem;
 }
 
 main section h1{
@@ -92,6 +97,9 @@ main section p{
 
   color: var(--text-color02);
 }
+main section p:last-child{
+  margin-top: 0;
+}
 
 main section span{
   color: var(--text-color01);
@@ -100,7 +108,7 @@ main section span{
 /*========= Footer ===============*/
 footer{
   text-align: center;
-  width: 56.8rem;
+  max-width: 56.8rem;
   margin: 0 auto 2.3rem;
   color: white;
 
@@ -126,4 +134,38 @@ footer .line{
   position: fixed;
   left: 2rem;
   bottom: 2rem;
+}
+
+@media (max-width: 700px){
+  body #lock{
+    width: 4.1rem;
+    height: 5.2rem;
+    left: 1rem;
+    bottom: 1rem;
+  }
+
+  .page nav{
+    flex-direction: column;
+    margin: 0 auto 5rem;
+    gap: 2rem;
+  }
+
+  section p br{
+    display: none;
+  }
+
+}
+
+@media (max-width: 1280px){
+  body main{
+    flex-direction: column;
+    margin-bottom: 10.7rem;
+  }
+  .page{
+    padding: 0 1rem 5rem;
+  }
+
+  .page nav{
+    margin: 0 auto 5.1rem;
+  }
 }
